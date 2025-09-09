@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseUI : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class PauseUI : MonoBehaviour
     {
         ResumeGame();
     }
+    public void OnChangeSenceButtonClick()//切换场景按钮
+    {
+        ChangeSence();  
+    }
     private void PauseGame()
     {
         if (pausePanel != null)
@@ -39,5 +44,9 @@ public class PauseUI : MonoBehaviour
             pausePanel.SetActive(false);
         }
         Time.timeScale = 1;
+    }
+    private void ChangeSence()
+    {
+        SceneManager.LoadScene("Custom");
     }
 }

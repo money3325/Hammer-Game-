@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomizationType : MonoBehaviour
+[CreateAssetMenu]
+//创建新的菜单
+public class CustomizationType : ScriptableObject
 {
-   
+
 }
